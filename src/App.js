@@ -1,7 +1,6 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
-import Products from './pages/Products';
 import Beers from './pages/Beers';
 import RandomBeer from './pages/RandomBeer';
 import NewBeer from './pages/NewBeer';
@@ -11,11 +10,9 @@ function App() {
     <div className="App">
       <Routes>
         <Route path='/' element={ <HomePage /> } />
-        <Route path='/products' element= {<Products />}>
-          <Route path='beers' element={ <Beers />} />
-          <Route path='random-beer' element={ <RandomBeer />} />
-          <Route path='new-beer' element={ <NewBeer />}  />
-        </Route>
+        <Route path='/beers' element={ <Beers />} />
+        <Route path='/random-beer' element={ <RandomBeer />} />
+        <Route path='/new-beer' element={ <NewBeer />}  />
       </Routes>
       
     </div>
